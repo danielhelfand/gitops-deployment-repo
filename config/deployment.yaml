@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wildwest
+  namespace: wildwest
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: wildwest
+  template:
+    metadata:
+      labels:
+        app: wildwest
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: wildwest
+        image: ghcr.io/danielhelfand/gitops-app-repo:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
