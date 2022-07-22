@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: wildwest
-        image: ghcr.io/danielhelfand/gitops-app-repo@sha256:90416f3e85a5395a5a818deb364d0d16b53562f59fee4f971930649735fa7486
+        image: ghcr.io/danielhelfand/gitops-app-repo@sha256:f564e50033efa601a5bc35c55724aa2837163ac4b1e4d65228eb1ce5c39e278e
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
